@@ -1,0 +1,233 @@
+.header-block{
+	position: relative;
+	padding: 0 0 200px;
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 52%;
+		height: 100%;
+		background: #2B7AF1;
+		border-radius: 0px 0px 0px 10px;
+	}
+}
+.header {
+	padding: 25px 0 21px;
+	position: relative;
+}
+.header__container {}
+.header__body {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+.header__main {
+	flex: 0 0 math.div(646, 1280) * 100%;
+}
+.header__main-row{
+	display: flex;
+}
+
+.menu__icon{
+	display: none;
+}
+.header__logo {
+	padding: 5px 0 0 0;
+	margin: 0 50px 0 0;
+}
+.min__logo{
+	display: none;
+}
+.header__menu {
+	flex: 0 1 511px;
+	padding: 18px 0 0 0;
+}
+.menu {}
+.menu__list {
+	display: flex;
+	// justify-content: space-evenly;
+	& li:not(:last-child){
+		margin: 0 40px 0 0;
+	}
+}
+.menu__link {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: math.div(20, 16) * 100%;
+	color: #111;
+	position: relative;
+	transition: all .3s ease 0s;
+	letter-spacing: 0.2px;
+	&.current{
+		border-bottom: 2px solid #111111;
+	}
+}
+.menu__link:not(.current):before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	height: 2px;
+	width: 0;
+	transition: all .3s ease 0s;
+	background-color: #111111;
+}
+.menu__link:not(.current):hover::before{
+	width: 100%;
+}
+.header__actions {
+	display: flex;
+}
+.header__email {
+}
+.header-email {
+	display: flex;
+	align-items: center;
+	margin: 0 20px 0 0;
+	cursor: pointer;
+}
+.header-email__icon {
+}
+.icon {
+	width: 40px;
+	height: 40px;
+	flex: 0 0 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #FFFFFF;
+	margin: 0 10px 0 0;
+}
+.header-email__link {
+	display: inline-block;
+	font-size: 16px;
+	line-height: math.div(20, 16) * 100%;
+	color: #fff;
+}
+.header__phone {}
+.header-phone {
+	display: flex;
+	align-items: center;
+}
+.header-phone__icon {}
+.header-phone__link {
+	display: inline-block;
+	font-size: 16px;
+	line-height: math.div(20, 16) * 100%;
+	color: #fff;
+}
+.header__button {
+	position: relative;
+	margin-left: 25px;
+}
+.header__btn {
+	min-height: 52px;
+	font-size: 18px;
+	line-height: math.div(22, 18) * 100%;
+	padding: 15px 30px;
+	border-radius: 25px;
+	white-space: nowrap;
+}
+.header__btn span:last-child{
+	display: none;
+}
+.btn{
+	background: linear-gradient(89.77deg, #FF7A00 0.2%, #FFB039 99.82%);
+	box-shadow: 0px 10px 20px rgba(255, 122, 0, 0.2);
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 25px;
+	transition: all .4s ease 0s;
+	&:hover{
+		background: linear-gradient(89.77deg, #DD6A00 0.2%, #F99806 99.82%);
+		box-shadow: 0px 10px 20px rgba(255, 122, 0, 0.2), inset 0px 4px 20px rgba(0, 0, 0, 0.1);
+	}
+	&:active{
+		background: linear-gradient(89.77deg, #DD6A00 0.2%, #F99806 99.82%);
+		box-shadow: 0px 10px 20px rgba(255, 122, 0, 0.2), inset 0px 7px 5px rgba(0, 0, 0, 0.2);
+	}
+}
+
+// SECTION HIGH
+
+.high{
+	padding: 30px 0 0 0;
+	/*Убираем горизонтальный скролл*/
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+.high__content {
+	/*Запрещаем увеличиваться, уменьшаться. Делаем на всю ширину области*/
+	flex: 0 0 100%;
+	/*Подстраиваем высоту контента под картинку (растягиваеи по высоте)*/
+	display: flex;
+}
+.high__container{
+	display: flex;
+	align-items: center;
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 15px;
+	flex: 1 1 100%;
+}
+.high__body {
+	padding: 0px 0px 0px 0;
+}
+
+.high__title {
+	font-size: 40px;
+	line-height: math.div(49, 40) * 100%;
+	font-weight: 800;
+	margin: 0 0 20px;
+	max-width: 413px;
+}
+.high__subtitle{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: math.div(33, 24) * 100%;
+	max-width: 290px;
+	margin: 0 0 60px;
+}
+.high__subtitle span:last-child{
+	display: none;
+}
+.high__btn{
+	font-size: 18px;
+	line-height: math.div(22, 18) * 100%;
+	max-width: 251px;
+	padding: 15px 30px;
+	border-radius: 25px;
+}
+.high__image{
+}
+.high__image img{
+	max-width: 100%;
+	border-radius: 10px 0px 0px 10px;
+}
+.menu-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	background: rgba(83, 83, 83, 0.48);
+	backdrop-filter: blur(5px);
+	transition: all .4s ease 0s;
+	z-index: 8;
+}
+.menu-overlay.show{
+	opacity: 1;
+	visibility: visible;
+}
